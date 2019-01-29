@@ -1,0 +1,36 @@
+<!-- Billboard -->
+
+<div class="center-h-parent">
+  <div class="center-h-child">
+    <div class="billboard">
+      <div class="billboard-box ">
+
+        {% if page.header.billboard_image != "" %}
+          <div class="billboard-item">
+            <div class="center-h-parent">
+              <div class="center-h-child">
+                {% for asset in page.header.billboard_image %}
+                  <img src="{{ asset.path }}" title="{{ site.title }}" alt="Image :: {{ site.title }}"/>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          <div class="separator tiny"></div>
+        {% endif %}
+
+        {% if page.header.billboard_title != "" %}
+          <div class="billboard-item">
+            <h1 class="text-center no-margin white-100-cl">{{ page.header.billboard_title }}</h1>
+          </div>
+        {% endif %}
+
+        {% if page.header.billboard_description != "" %}
+          <div class="billboard-item">
+            <p class="text-center no-margin large white-100-cl">{{ page.header.billboard_description }}</p>
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>

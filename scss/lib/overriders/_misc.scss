@@ -1,0 +1,29 @@
+// Misc
+
+// Remove tap highlight
+.button,
+.link,
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: $tap;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.auto {
+  width: auto !important;
+}
+
+.inline-block {
+  display: inline-block !important;
+}
+
+.price-label {
+  font-weight: bold;
+  line-height: 40px !important;
+}

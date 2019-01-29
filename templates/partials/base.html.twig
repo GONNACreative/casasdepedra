@@ -1,0 +1,51 @@
+<!-- Base -->
+
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+  {% include "partials/head.html.twig" %}
+  <body id="top" class="{{ page.header.body_classes }}">
+    <!-- Header -->
+    {% include "partials/header.html.twig" %}
+
+    <!-- Hero -->
+    {% if page.home == true %}
+      {% include "partials/hero.html.twig" %}
+    {% endif %}
+
+    <!-- Main -->
+    <div class="universal main gray-100-bg">
+      <div class="universal-box">
+        <div class="universal-item">
+          <div class="center-h-parent">
+            <div class="center-h-child">
+              <div class="left col-large-1-1">
+                <!-- Home -->
+                {% if page.template == "home" %}
+                  {% include "partials/main_home.html.twig" %}
+                <!-- About -->
+                {% elseif page.template == "about" %}
+                  {% include "partials/main_about.html.twig" %}
+                <!-- Houses -->
+                {% elseif page.template == "houses" %}
+                  {% include "partials/main_houses.html.twig" %}
+                <!-- House -->
+                {% elseif page.template == "house" %}
+                  {% include "partials/main_house.html.twig" %}
+                <!-- Garden -->
+                {% elseif page.template == "garden" %}
+                  {% include "partials/main_garden.html.twig" %}
+                <!-- Default -->
+                {% else %}
+                  {% include "partials/main.html.twig" %}
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    {% include "partials/footer.html.twig" %}
+  </body>
+</html>

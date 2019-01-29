@@ -1,0 +1,61 @@
+@extends:
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          fields:
+            # House thumb image
+            header.house_thumb_image:
+              type: file
+              label: "House Thumb Image"
+              size: long
+              style: vertical
+              multiple: false
+              destination: "theme@:/images"
+              random_name: true
+              avoid_overwriting: false
+              limit: 10
+              accept:
+                - image/*
+            # House Description
+            header.house_description:
+              type: textarea
+              label: "House Description"
+              rows: 4
+              size: long
+              style: vertical
+            # Price label
+            header.price_label:
+              type: text
+              label: "Price label"
+              size: long
+              style: vertical
+            # Reservations
+            header.reservations:
+               type: array
+               label: "Reservations"
+               placeholder_key: "Key"
+               placeholder_value: "Value"
+
+        sidebar:
+          type: tab
+          title: Sidebar
+          fields:
+            # Sidebar content
+            header.sidebar_content:
+              type: markdown
+              markdown: true
+              validate:
+                type: textarea
+              label: "Description"
+              rows: 4
+              size: long
+              style: vertical

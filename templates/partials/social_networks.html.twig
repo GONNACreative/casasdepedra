@@ -1,0 +1,31 @@
+<!-- Social Networks -->
+
+<div class="center-h-parent">
+  <div class="center-h-child">
+    <div class="branding">
+      <div class="branding-box">
+        <div class="branding-item">
+          <a href="https://www.facebook.com/casasdepedra.net/" target="_blank" class="link tiny">
+            {% for asset in config.plugins.casasdepedra.branding_image %}
+              <img src="{{url('theme://images/icons-redes-01.png')}}" title="{{ site.title }}" alt="Image :: {{ site.title }}" class="sn"/>
+            {% endfor %}
+          </a>
+        </div>
+        <div class="branding-item">
+          <a href="https://www.instagram.com/casasdepedra/" target="_blank" class="link tiny">
+            {% for asset in config.plugins.casasdepedra.branding_image %}
+              <img src="{{url('theme://images/icons-redes-02.png')}}" title="{{ site.title }}" alt="Image :: {{ site.title }}" class="sn"/>
+            {% endfor %}
+          </a>
+        </div>
+        <div class="branding-item">
+          <a href="https://www.tripadvisor.pt/" target="_blank" class="link tiny">
+            {% for asset in config.plugins.casasdepedra.branding_image %}
+              <img src="{{url('theme://images/icons-redes-03.png')}}" title="{{ site.title }}" alt="Image :: {{ site.title }}" class="sn"/>
+            {% endfor %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

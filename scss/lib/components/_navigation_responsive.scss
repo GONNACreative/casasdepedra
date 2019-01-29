@@ -1,0 +1,101 @@
+// Navigation
+
+$class: "navigation-responsive";
+
+.#{$class}-wrapper {
+  @include hide-block-element;
+}
+
+.#{$class} {
+  width: 100%;
+  .#{$class}-box {
+    @include clear-list;
+    float: left;
+    padding: 4px;
+    width: 100%;
+    .#{$class}-item {
+      float: left;
+      padding: 4px;
+      width: 100%;
+      .button {
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media #{$nano} {
+  .#{$class}-wrapper {
+    @include show-block-element;
+  }
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$tiny} {
+  .#{$class}-wrapper {
+    @include show-block-element;
+  }
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$small} {
+  .#{$class}-wrapper {
+    @include show-block-element;
+  }
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$medium} {
+  .#{$class}-wrapper {
+    @include hide-block-element;
+  }
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$large} {
+  .#{$class}-wrapper {
+    @include hide-block-element;
+  }
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$extra-large} {
+  .#{$class}-wrapper {
+    @include hide-block-element;
+  }
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}

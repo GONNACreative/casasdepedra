@@ -1,0 +1,13 @@
+<!-- Branding -->
+
+<div class="branding">
+  <div class="branding-box">
+    <div class="branding-item">
+      <a href="{{ base_url }}/" class="link tiny">
+        {% for asset in config.plugins.casasdepedra.branding_image %}
+          <img src="{{ url(asset.path) }}" title="{{ site.title }}" alt="Image :: {{ site.title }}"/>
+        {% endfor %}
+      </a>
+    </div>
+  </div>
+</div>

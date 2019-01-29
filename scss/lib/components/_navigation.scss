@@ -1,0 +1,97 @@
+// Navigation
+
+$class: "navigation";
+
+.#{$class} {
+  .#{$class}-box {
+    @include clear-list;
+    float: left;
+    .#{$class}-item {
+      float: left;
+      padding: 8px;
+      .link {
+        font-weight: bold;
+        padding: 14px 0;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      &.altai-trigger {
+        @include hide-block-element;
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media #{$nano} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+        @include hide-block-element;
+      }
+      .#{$class}-item {
+        &.altai-trigger {
+          @include show-block-element;
+        }
+      }
+    }
+  }
+}
+
+@media #{$tiny} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+        @include hide-block-element;
+      }
+      .#{$class}-item {
+        &.altai-trigger {
+          @include show-block-element;
+        }
+      }
+    }
+  }
+}
+
+@media #{$small} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+        @include hide-block-element;
+      }
+      .#{$class}-item {
+        &.altai-trigger {
+          @include show-block-element;
+        }
+      }
+    }
+  }
+}
+
+@media #{$medium} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$large} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+@media #{$extra-large} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}

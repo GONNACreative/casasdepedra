@@ -1,0 +1,15 @@
+<!-- Header -->
+
+{% block header %}
+  <div class="universal header">
+    <div class="universal-box">
+      <div class="universal-item">
+        {% include "partials/branding.html.twig" %}
+        {% include "partials/navigation.html.twig" %}
+      </div>
+      <div class="universal-item navigation-responsive-wrapper">
+        {% include "partials/navigation_responsive.html.twig" %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
