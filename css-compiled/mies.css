@@ -1526,7 +1526,8 @@ strong {
       font-weight: bold;
       padding: 14px 0;
       text-decoration: none;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      line-height: 48px; }
     .navigation .navigation-box .navigation-item.altai-trigger {
       display: none;
       visibility: hidden; }
@@ -1570,9 +1571,11 @@ strong {
       padding: 4px;
       width: 100%; }
       .navigation-responsive .navigation-responsive-box .navigation-responsive-item .button {
+        float: left;
         font-weight: bold;
         text-decoration: none;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        width: 100%; }
 
 @media (max-width: 359px) {
   .navigation-responsive-wrapper {

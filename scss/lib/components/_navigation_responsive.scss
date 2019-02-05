@@ -18,9 +18,11 @@ $class: "navigation-responsive";
       padding: 4px;
       width: 100%;
       .button {
+        float: left;
         font-weight: bold;
         text-decoration: none;
         text-transform: uppercase;
+        width: 100%;
       }
     }
   }
