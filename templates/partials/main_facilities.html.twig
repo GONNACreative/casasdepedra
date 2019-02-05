@@ -1,0 +1,29 @@
+<!-- Main About -->
+
+{% block main_about %}
+  <div class="content left col-large-1-1">
+    <div class="content-box">
+      <!-- Title -->
+      {% if page.header.title != "" %}
+        <div class="content-item">
+          <h1 class="extra-large text-center no-margin pink-500-cl">{{ page.header.title }}</h1>
+        </div>
+      {% endif %}
+      <!-- Content -->
+      {% if page.content != "" %}
+        <div class="content-item">
+          {{ page.content|raw }}
+        </div>
+      {% endif %}
+      <!-- Cover image -->
+      {% if page.header.cover_image != "" %}
+        <div class="content-item">
+          {% for asset in page.header.cover_image %}
+            <img src="{{ url(asset.path) }}" title="{{ site.title }}" alt="Image :: {{ site.title }}"/>
+          {% endfor %}
+        </div>
+        <div class="separator tiny"></div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
